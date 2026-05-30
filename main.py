@@ -6,7 +6,15 @@ from fastapi.middleware.cors import CORSMiddleware
 from . import models, schemas, crud, database, services
 
 # 🚀 SINGLE APP (CORRETO)
-app = FastAPI(title="CRM SaaS API")
+#app = FastAPI(title="CRM SaaS API")
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"status": "ok"}
 
 # 🌐 CORS (OBRIGATÓRIO PARA FRONTEND)
 app.add_middleware(
