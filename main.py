@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 
 from fastapi.middleware.cors import CORSMiddleware
 
-from . import models, schemas, crud, database, services
+import models, schemas, crud, database, services
 
 # 🚀 SINGLE APP (CORRETO)
 #app = FastAPI(title="CRM SaaS API")
